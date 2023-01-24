@@ -16,7 +16,7 @@ app.use(cors());
 
 //RUTAS
 
-app.use('/api', require('.routes/api'));
+app.use('/api', require('./routes/api.js'));
 
 
 module.exports = app;
