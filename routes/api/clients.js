@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { getAll, create, getById, update, deleteById } = require('../../models/client.model');
+const { getAll, getById, create, update, deleteById } = require('../../models/client.model');
 
 //GET
 

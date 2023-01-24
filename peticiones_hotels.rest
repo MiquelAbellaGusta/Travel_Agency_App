@@ -1,0 +1,42 @@
+
+//GET
+
+###
+GET http://localhost:3000/api/hotels
+
+###
+GET http://localhost:3000/api/hotels/3
+
+//POST
+
+###
+POST http://localhost:3000/api/hotels
+Content-Type: application/json
+
+{
+  "name":"The Beach House",
+  "address":"The Beach House, Beach Front, Ankwanda (nr Elmina)",
+  "city":"Ghana",
+  "stars":3,
+  "description":"El The Beach House, Ankwanda se encuentra en Ankwanda, a 5,5 km del castillo de Elmina, y ofrece alojamiento con restaurante, aparcamiento privado gratuito, bar y jardín. Ofrece habitaciones familiares y terraza. Hay servicio de habitaciones y WiFi gratuita.Las habitaciones están equipadas con escritorio, TV de pantalla plana, baño privado, ropa de cama y toallas. Todas las habitaciones están equipadas con aire acondicionado. Algunas habitaciones del The Beach House, Ankwanda tienen balcón.",
+  "tariff":41
+
+   }
+
+//PUT
+
+###
+
+PUT http://localhost:3000/api/hotels/3
+Content-Type: application/json
+
+{
+  "name": "Hotel Lloret Ramblas",
+  "address": "Rambla Canaletes, 125, Ciutat Vella, 08002",
+  "city": "Barcelona",
+  "stars": 1,
+  "description": "El Hotel Lloret Ramblas se encuentra en las famosas Ramblas de Barcelona, junto a la plaza Catalunya. Ofrece servicio de recepción las 24 horas del día y habitaciones con aire acondicionado, TV de pantalla plana vía satélite y conexión inalámbrica a internet gratuita.Todas las habitaciones del Lloret Ramblas Hotel son funcionales y cuentan con escritorio y baño privado con artículos de tocador. Algunas, además, tienen balcón privado.",
+  "tariff": "61.00"
+}
+
+

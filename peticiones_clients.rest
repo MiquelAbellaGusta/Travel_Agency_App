@@ -1,0 +1,23 @@
+
+//GET
+
+###
+GET http://localhost:3000/api/clients
+
+//POST
+
+###
+POST http://localhost:3000/api/clients
+Content-Type: application/json
+
+{
+    "name": "",
+    "surname": "",
+    "address":"", 
+    "phone":, 
+    "birth":"", 
+    "email":"", 
+    "dni":""
+    }
+
+//

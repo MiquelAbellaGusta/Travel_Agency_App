@@ -24,7 +24,7 @@ const getHotelByCity = (city) => {
 
 const create = ({ name, address, city, stars, description, tariff }) => {
     return db.query(
-        'insert into hotels (name, address, city, stars, description, tariff) values (?, ?, ?, ?, ?, ?,)',
+        'insert into hotels (name, address, city, stars, description, tariff) values (?, ?, ?, ?, ?, ?)',
         [name, address, city, stars, description, tariff]
     );
 }
