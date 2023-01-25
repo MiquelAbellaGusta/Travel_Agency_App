@@ -1,7 +1,14 @@
 const router = require('express').Router();
 
-router.use('/clients', require('./api/clients'));
-router.use('/travels', require('./api/travels'));
-router.use('/hotels', require('./api/hotels'));
+const { checkToken, checkAdmin, checkRole } = require('../helpers/middlewares');
+
+router.use('/clients', checkToken, checkAdmin, require('./api/clients'));
+
+router.use('/travels', checkToken, checkRole('user'), require('./api/travels'));
+
+router.use('/hotels', checkToken, checkRole('user'), require('./api/hotels'));
+
+router.use('/users', require('./api/users'));
+
 
 module.exports = router;

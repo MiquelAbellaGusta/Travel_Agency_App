@@ -4,6 +4,8 @@
 ###
 GET http://localhost:3000/api/clients
 
+###
+GET http://localhost:3000/api/clients
 //POST
 
 ###
@@ -20,4 +22,18 @@ Content-Type: application/json
     "dni":""
     }
 
-//
+//PUT
+
+PUT http://localhost:3000/api/clients/3
+Content-Type: application/json
+
+{
+    "name": "",
+    "surname": "",
+    "address":"", 
+    "phone":, 
+    "birth":"", 
+    "email":"", 
+    "dni":"",
+    "role":
+    }
