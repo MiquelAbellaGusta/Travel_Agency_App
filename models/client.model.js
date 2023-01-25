@@ -8,11 +8,6 @@ const getById = (clientId) => {
     return db.query('select * from clients where id = ?', [clientId]);
 }
 
-const getByTravelId = (travelId) => {
-    return db.query('select * from travels where id=?', [travelId])
-}
-
-
 //POST
 
 const create = ({ name, surname, address, phone, birth, email, dni }) => {
