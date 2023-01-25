@@ -32,7 +32,7 @@ router.post('/login', async (req, res) => {
     }
 
     res.json({
-        success: 'Bienvenido' + '' + user.username,
+        success: 'Bienvenido' + ' ' + user.username,
         token: createToken(user)
     });
 });

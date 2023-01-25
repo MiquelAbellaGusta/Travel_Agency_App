@@ -35,10 +35,10 @@ const checkAdmin = (req, res, next) => {
     next();
 }
 
-const checkRole = (role) => {
+const checkRole = (role1, role2) => {
     return (req, res, next) => {
-        if (req.user.role !== role) {
-            return res.json({ fatal: `zona restringida. Solo para ${role}` });
+        if (req.user.role !== role1 | role2) {
+            return res.json({ fatal: `zona restringida. Solo para ${role1} o ${role2}` });
         }
         next();
     };

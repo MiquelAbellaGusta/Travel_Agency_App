@@ -8,6 +8,10 @@ const getById = (clientId) => {
     return db.query('select * from clients where id = ?', [clientId]);
 }
 
+const getByTravelId = (travelId) => {
+    return db.query('select * from travels where id=?', [travelId])
+}
+
 
 //POST
 
@@ -29,6 +33,13 @@ const update = (clientId, { name, surname, address, phone, birth, email, dni }) 
     )
 }
 
+const updateHotel = (clientId, hotelId) => {
+    return db.query('update clients set hotel_id=? where id=?', [hotelId, clientId])
+}
+const updateTravel = (clientId, travelId) => {
+    return db.query('update clients set travel_id=? where id=?', [travelId, clientId])
+}
+
 //DELETE
 
 const deleteById = (clientId) => {
@@ -36,5 +47,5 @@ const deleteById = (clientId) => {
 }
 
 module.exports = {
-    getAll, getById, create, update, deleteById
+    getAll, getById, getByTravelId, create, update, updateHotel, updateTravel, deleteById
 }

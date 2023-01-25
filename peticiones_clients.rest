@@ -6,34 +6,25 @@ GET http://localhost:3000/api/clients
 
 ###
 GET http://localhost:3000/api/clients
+
 //POST
 
 ###
 POST http://localhost:3000/api/clients
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImV4cCI6MTY4MjQzMDQ1OCwiaWF0IjoxNjc0NjU4MDU4fQ.9XCpTBc_Fg8djybTb5pPcvPoobLPqxcNtWslLoQE2yE
 
-{
-    "name": "",
-    "surname": "",
-    "address":"", 
-    "phone":, 
-    "birth":"", 
-    "email":"", 
-    "dni":""
-    }
+{    "name": "Jow",
+    "surname": "Lion",
+    "address":"c/selva,43 Barcelona", 
+    "phone":685485789, 
+    "birth":"1986-12-31", 
+    "email":"jow@gmail.com", 
+    "dni":"88856957J"
+}
 
 //PUT
 
-PUT http://localhost:3000/api/clients/3
-Content-Type: application/json
-
-{
-    "name": "",
-    "surname": "",
-    "address":"", 
-    "phone":, 
-    "birth":"", 
-    "email":"", 
-    "dni":"",
-    "role":
-    }
+###
+PUT http://localhost:3000/api/clients/5/5
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImV4cCI6MTY4MjQzMDQ1OCwiaWF0IjoxNjc0NjU4MDU4fQ.9XCpTBc_Fg8djybTb5pPcvPoobLPqxcNtWslLoQE2yE

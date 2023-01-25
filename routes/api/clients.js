@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { getAll, getById, create, update, deleteById } = require('../../models/client.model');
+const { getAll, getById, create, update, updateHotel, deleteById } = require('../../models/client.model');
 
 //GET
 
@@ -26,6 +26,8 @@ router.get('/:clientId', async (req, res) => {
         res.json({ fatal: error.message });
     }
 });
+
+
 
 //POST
 
@@ -54,6 +56,28 @@ router.put('/:clientId', async (req, res) => {
 
         res.json(client[0]);
 
+    } catch (error) {
+        res.json({ fatal: error.message });
+    }
+});
+router.put('/:clientId/:travelId', async (req, res) => {
+    const { clientId, travelId } = req.params;
+
+    try {
+        const [result] = await updateTravel(clientId, travelId);
+        const [client] = await getById(clientId);
+        res.json(client[0]);
+    } catch (error) {
+        res.json({ fatal: error.message });
+    }
+});
+router.put('/:clientId/:hotelId', async (req, res) => {
+    const { clientId, hotelId } = req.params;
+
+    try {
+        const [result] = await updateHotel(clientId, hotelId);
+        const [client] = await getById(clientId);
+        res.json(client[0]);
     } catch (error) {
         res.json({ fatal: error.message });
     }

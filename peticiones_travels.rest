@@ -9,12 +9,14 @@ GET http://localhost:3000/api/travels
 ###
 POST http://localhost:3000/api/travels
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImV4cCI6MTY4MjQzMDQ1OCwiaWF0IjoxNjc0NjU4MDU4fQ.9XCpTBc_Fg8djybTb5pPcvPoobLPqxcNtWslLoQE2yE
 
-{
-   "departure_date":,
-   "arrival_date":,
-   "departure_id":,
-   "arrival_id":
+{ 
+"departure_date":"2023-06-10",
+"arrival_date":"2023-06-17",
+"departure_id":"AE-18278",
+"arrival_id":"IB-23919"
+
    }
 
-//
+

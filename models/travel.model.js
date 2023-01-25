@@ -5,7 +5,7 @@ const getAll = () => {
 }
 
 const getById = (travelId) => {
-    return db.query('select * from trafvels where id = ?', [travelId]);
+    return db.query('select * from travels where id = ?', [travelId]);
 }
 
 const getTravelClients = (travelId) => {
